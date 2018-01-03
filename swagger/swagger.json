@@ -1,0 +1,506 @@
+{
+    "swagger": "2.0",
+    "info": {
+        "title": "GoHold API文档",
+        "description": "每个API接口所需要的参数及其请求方式都在文档中",
+        "version": "1.0.0",
+        "termsOfService": "http://www.ipower001.com",
+        "contact": {
+            "email": "共电科技"
+        },
+        "license": {
+            "name": "Apache 2.0",
+            "url": "http://www.apache.org/licenses/LICENSE-2.0.html"
+        }
+    },
+    "basePath": "/v1",
+    "paths": {
+        "/index/": {
+            "get": {
+                "tags": [
+                    "index"
+                ],
+                "operationId": "ArticleController.获取首页数据",
+                "parameters": [
+                    {
+                        "in": "query",
+                        "name": "index_page",
+                        "description": "页码",
+                        "required": true,
+                        "type": "string"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "{string} 获取成功!"
+                    },
+                    "获取失败": {
+                        "description": ""
+                    }
+                }
+            },
+            "post": {
+                "tags": [
+                    "index"
+                ],
+                "operationId": "ArticleController.获取首页数据",
+                "parameters": [
+                    {
+                        "in": "query",
+                        "name": "index_page",
+                        "description": "页码",
+                        "required": true,
+                        "type": "string"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "{string} 获取成功!"
+                    },
+                    "获取失败": {
+                        "description": ""
+                    }
+                }
+            }
+        },
+        "/index/getBanner": {
+            "get": {
+                "tags": [
+                    "index"
+                ],
+                "operationId": "ArticleController.获取banner数据",
+                "parameters": [
+                    {
+                        "in": "query",
+                        "name": "aid",
+                        "description": "文章id",
+                        "required": true,
+                        "type": "string"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "{string} 响应成功!"
+                    },
+                    "响应失败": {
+                        "description": ""
+                    }
+                }
+            },
+            "post": {
+                "tags": [
+                    "index"
+                ],
+                "operationId": "ArticleController.获取banner数据",
+                "parameters": [
+                    {
+                        "in": "query",
+                        "name": "aid",
+                        "description": "文章id",
+                        "required": true,
+                        "type": "string"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "{string} 响应成功!"
+                    },
+                    "响应失败": {
+                        "description": ""
+                    }
+                }
+            }
+        },
+        "/index/likeArticle": {
+            "get": {
+                "tags": [
+                    "index"
+                ],
+                "operationId": "ArticleController.文章点赞",
+                "parameters": [
+                    {
+                        "in": "query",
+                        "name": "token",
+                        "description": "口令",
+                        "required": true,
+                        "type": "string"
+                    },
+                    {
+                        "in": "query",
+                        "name": "articleId",
+                        "description": "文章id",
+                        "required": true,
+                        "type": "string"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "{string} 点赞成功!"
+                    },
+                    "点赞失败": {
+                        "description": ""
+                    }
+                }
+            },
+            "post": {
+                "tags": [
+                    "index"
+                ],
+                "operationId": "ArticleController.文章点赞",
+                "parameters": [
+                    {
+                        "in": "query",
+                        "name": "token",
+                        "description": "口令",
+                        "required": true,
+                        "type": "string"
+                    },
+                    {
+                        "in": "query",
+                        "name": "articleId",
+                        "description": "文章id",
+                        "required": true,
+                        "type": "string"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "{string} 点赞成功!"
+                    },
+                    "点赞失败": {
+                        "description": ""
+                    }
+                }
+            }
+        },
+        "/index/publishArticle": {
+            "get": {
+                "tags": [
+                    "index"
+                ],
+                "responses": {
+                    "200": {
+                        "description": "{string} 发布成功!"
+                    },
+                    "发布失败": {
+                        "description": ""
+                    }
+                }
+            },
+            "post": {
+                "tags": [
+                    "index"
+                ],
+                "responses": {
+                    "200": {
+                        "description": "{string} 发布成功!"
+                    },
+                    "发布失败": {
+                        "description": ""
+                    }
+                }
+            }
+        },
+        "/index/replyArticle": {
+            "get": {
+                "tags": [
+                    "index"
+                ],
+                "operationId": "ArticleController.评论文章",
+                "parameters": [
+                    {
+                        "in": "query",
+                        "name": "token",
+                        "description": "口令",
+                        "required": true,
+                        "type": "string"
+                    },
+                    {
+                        "in": "query",
+                        "name": "content",
+                        "description": "内容",
+                        "required": true,
+                        "type": "string"
+                    },
+                    {
+                        "in": "query",
+                        "name": "articleId",
+                        "description": "文章id",
+                        "required": true,
+                        "type": "string"
+                    },
+                    {
+                        "in": "query",
+                        "name": "commentId",
+                        "description": "评论id",
+                        "required": true,
+                        "type": "string"
+                    },
+                    {
+                        "in": "query",
+                        "name": "beUserId",
+                        "description": "被评论人id",
+                        "required": true,
+                        "type": "string"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "{string} 评论成功!"
+                    },
+                    "评论失败": {
+                        "description": ""
+                    }
+                }
+            },
+            "post": {
+                "tags": [
+                    "index"
+                ],
+                "operationId": "ArticleController.评论文章",
+                "parameters": [
+                    {
+                        "in": "query",
+                        "name": "token",
+                        "description": "口令",
+                        "required": true,
+                        "type": "string"
+                    },
+                    {
+                        "in": "query",
+                        "name": "content",
+                        "description": "内容",
+                        "required": true,
+                        "type": "string"
+                    },
+                    {
+                        "in": "query",
+                        "name": "articleId",
+                        "description": "文章id",
+                        "required": true,
+                        "type": "string"
+                    },
+                    {
+                        "in": "query",
+                        "name": "commentId",
+                        "description": "评论id",
+                        "required": true,
+                        "type": "string"
+                    },
+                    {
+                        "in": "query",
+                        "name": "beUserId",
+                        "description": "被评论人id",
+                        "required": true,
+                        "type": "string"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "{string} 评论成功!"
+                    },
+                    "评论失败": {
+                        "description": ""
+                    }
+                }
+            }
+        },
+        "/index/view": {
+            "get": {
+                "tags": [
+                    "index"
+                ],
+                "operationId": "ArticleController.浏览文章（隐式操作）",
+                "parameters": [
+                    {
+                        "in": "query",
+                        "name": "aid",
+                        "description": "文章id",
+                        "required": true,
+                        "type": "string"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "{string} 响应成功!"
+                    },
+                    "响应失败": {
+                        "description": ""
+                    }
+                }
+            },
+            "post": {
+                "tags": [
+                    "index"
+                ],
+                "operationId": "ArticleController.浏览文章（隐式操作）",
+                "parameters": [
+                    {
+                        "in": "query",
+                        "name": "aid",
+                        "description": "文章id",
+                        "required": true,
+                        "type": "string"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "{string} 响应成功!"
+                    },
+                    "响应失败": {
+                        "description": ""
+                    }
+                }
+            }
+        },
+        "/user/login": {
+            "post": {
+                "tags": [
+                    "user"
+                ],
+                "description": "用来登陆的接口",
+                "operationId": "UserController.User what fuck",
+                "parameters": [
+                    {
+                        "in": "body",
+                        "name": "account",
+                        "description": "账户名（手机号）",
+                        "required": true,
+                        "type": "string"
+                    },
+                    {
+                        "in": "body",
+                        "name": "password",
+                        "description": "密码（6-12位）",
+                        "required": true,
+                        "type": "string"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "{string} 登录成功!"
+                    },
+                    "账户名或密码不对": {
+                        "description": ""
+                    }
+                }
+            }
+        },
+        "/user/register": {
+            "get": {
+                "tags": [
+                    "user"
+                ],
+                "operationId": "UserController.用户注册接口",
+                "parameters": [
+                    {
+                        "in": "query",
+                        "name": "username",
+                        "description": "The username for login",
+                        "required": true,
+                        "type": "string"
+                    },
+                    {
+                        "in": "query",
+                        "name": "password",
+                        "description": "The password for login",
+                        "required": true,
+                        "type": "string"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "{string} 登录成功!"
+                    },
+                    "账户名或密码不对": {
+                        "description": ""
+                    }
+                }
+            },
+            "post": {
+                "tags": [
+                    "user"
+                ],
+                "operationId": "UserController.用户注册接口",
+                "parameters": [
+                    {
+                        "in": "query",
+                        "name": "username",
+                        "description": "The username for login",
+                        "required": true,
+                        "type": "string"
+                    },
+                    {
+                        "in": "query",
+                        "name": "password",
+                        "description": "The password for login",
+                        "required": true,
+                        "type": "string"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "{string} 登录成功!"
+                    },
+                    "账户名或密码不对": {
+                        "description": ""
+                    }
+                }
+            }
+        },
+        "/user/uploadPhoto": {
+            "get": {
+                "tags": [
+                    "user"
+                ],
+                "operationId": "UserController.用户上传头像",
+                "parameters": [
+                    {
+                        "in": "query",
+                        "name": "photo",
+                        "description": "字符流",
+                        "required": true,
+                        "type": "string"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "{string} 上传成功!"
+                    },
+                    "上传失败": {
+                        "description": ""
+                    }
+                }
+            },
+            "post": {
+                "tags": [
+                    "user"
+                ],
+                "operationId": "UserController.用户上传头像",
+                "parameters": [
+                    {
+                        "in": "query",
+                        "name": "photo",
+                        "description": "字符流",
+                        "required": true,
+                        "type": "string"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "{string} 上传成功!"
+                    },
+                    "上传失败": {
+                        "description": ""
+                    }
+                }
+            }
+        }
+    },
+    "tags": [
+        {
+            "name": "user",
+            "description": "用户行为\n"
+        }
+    ]
+}
